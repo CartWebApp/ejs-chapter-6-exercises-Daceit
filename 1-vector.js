@@ -5,6 +5,23 @@
 // Add a getter property length to the prototype that computes the length of the vector—that is, the distance of the point (x, y) from the origin (0, 0).
 
 // Your code here.
+class Vec {
+    constructor(x,y) {
+        this.x = x
+        this.y = y
+    }
+    plus(plusvec) {
+        this.x += plusvec.x
+        this.y += plusvec.y
+        return this
+    }
+    minus(minusvec){
+        this.x -= minusvec.x
+        this.y -= minusvec.y
+        return this
+    }
+}
+
 
 
 // Tests:
