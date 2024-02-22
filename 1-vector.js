@@ -10,6 +10,7 @@ class Vec {
         this.x = x
         this.y = y
     }
+    get length (){return Math.sqrt(this.x * this.x + this.y *this.y)}
     plus(plusvec) {
         this.x += plusvec.x
         this.y += plusvec.y
