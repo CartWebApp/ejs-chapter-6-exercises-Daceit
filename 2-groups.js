@@ -15,24 +15,32 @@ class Group {
     return new Group(array);
 
   }
-  static has(hasnum) {
-    return this.array.includes(hasnum);
+  has(hasnum) {
+    for(let x of this.array){
+      if (x === hasnum){
+        return true;
+      } else {
+        return false;
+      }
+    }
+
   }
-  static add(addnum) {
-    if (!this.array.includes(addnum)) {
-      array.push(addnum);
+  add(addnum) {
+    for(let y of this.array){
+      if (y === addnum){
+       this.array.push(addnum);
+       return this.array;
+    } else {
+      return this.array;
+    }
     }
   }
-  static delete(delnum) {
-    if (this.array.includes(delnum)) {
-      array.pop(delnum);
+  delete(delnum) {
+      this.array = this.array.filter((n)=>n!==delnum)
     }
   }
 
 
-
-
-}
 
 
 // Tests:
